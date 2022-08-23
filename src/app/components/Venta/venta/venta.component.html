@@ -1,0 +1,70 @@
+
+<div class="card">
+  <h5 class="card-header">Cliente</h5>
+  <div class="card-body">
+   <form [formGroup]="ventaForm" >
+  <div class="form-row ">
+    <div class="col-md-6 mb-3">
+      <span class="e-float-line"></span>
+      <ejs-dropdownlist formControlName="idCliente" name="cliente" value='value' [fields]='fields' [dataSource]='clienteData' placeholder="Cliente" [allowFiltering]='true' floatLabelType='Auto' required>
+      </ejs-dropdownlist>
+    </div>
+  </div>
+</form>
+  </div>
+</div>
+
+<br>
+
+<div class="card">
+  <h5 class="card-header">Producto</h5>
+  <div class="card-body">
+    <form class="needs-validation" novalidate [formGroup]="ventaForm">
+
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <span class="e-float-line"></span>
+          <ejs-dropdownlist formControlName="idProducto" name="producto" value='value' style="margin-top: -20px;" [fields]='fields1' [dataSource]='productoData' placeholder="Producto" [allowFiltering]='true' floatLabelType='Auto' required>
+          </ejs-dropdownlist>
+        </div>
+
+        <div class="col-md-3 mb-3">
+          <input type="text" formControlName="cantidad" name="cantidad" class="form-control" id="validationCustom04" placeholder="Cantidad" required>
+        </div>
+
+        <div class="col-md-3 mb-3">
+          <button class="btn btn-primary" type="submit" (click)="seleccionarProducto($any($event))">Agregar Producto</button>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">nombre</th>
+              <th scope="col">cantidad</th>
+              <th scope="col">valor_Unitario</th>
+              <th scope="col">valor_Total</th>
+              <th scope="col">Administrar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of dataProducto">
+              <th>{{item.nombre}}</th>
+              <td>{{item.cantidad}}</td>
+              <td>{{item.valor_Unitario}}</td>
+              <td>{{item.valor_Total}}</td>
+              <td><button mat-raised-button color="warn" focusable="false" (click)="borrarFila($any($event))">
+                Borra
+              </button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+    <button class="btn btn-primary" type="submit" (click)="GuardarVenta()">Venta</button>
+
+    </form>
+  </div>
+</div>

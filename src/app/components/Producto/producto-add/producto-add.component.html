@@ -1,0 +1,27 @@
+
+
+<div class="card">
+  <h5 class="card-header">{{titulo}}</h5>
+  <div class="card-body">
+    <form [formGroup]="ProductoForm" (submit)="agregarEditarProducto()">
+      <div class="row">
+        <div class="col-md-6">
+          <input formControlName="nombre" type="text" class="form-control" placeholder="Nombre">
+        </div>
+        <div class="col-md-6">
+          <input formControlName="valor_Unitario" type="number" class="form-control" placeholder="Valor_Unitario">
+        </div>
+      </div>
+      <div class="form-group"> </div>
+      <div class="row">
+        <div class="col-md-6">
+          <input formControlName="stock" type="number" class="form-control" placeholder="Stock">
+        </div>
+
+      </div>
+      <div class="form-group"></div>
+      <button mat-flat-button color="primary" [disabled]="ProductoForm.invalid">Guardar</button>
+      <a mat-stroked-button routerLink="/producto">Cancelar</a>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+
+<div class="card">
+  <h5 class="card-header">{{titulo}}</h5>
+  <div class="card-body">
+    <form [formGroup]="formCliente" (submit)="agregarEditarCliente()">
+      <div class="row">
+        <div class="col-md-6">
+          <input formControlName="cedula" type="number" class="form-control" placeholder="Cedula">
+        </div>
+        <div class="col-md-6">
+          <input formControlName="nombre" type="text" class="form-control" placeholder="Nombre">
+        </div>
+      </div>
+      <div class="form-group"> </div>
+      <div class="row">
+        <div class="col-md-6">
+          <input formControlName="apellido" type="text" class="form-control" placeholder="Apellido">
+        </div>
+        <div class="col-md-6">
+          <input formControlName="telefono" type="text" class="form-control" placeholder="Telefono">
+        </div>
+
+      </div>
+      <div class="form-group">
+
+      </div>
+      <button mat-flat-button color="primary" [disabled]="formCliente.invalid">Guardar</button>
+      <a mat-stroked-button routerLink="/cliente">Cancelar</a>
+    </form>
+  </div>
+</div>

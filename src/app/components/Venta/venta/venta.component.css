@@ -1,0 +1,33 @@
+.mat-card {
+  background: white;
+  color: rgb(20, 19, 19);
+}
+
+.mat-card-title {
+  color: rgb(18, 17, 17);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.mat-flat-button {
+  background: #007bff;
+  color: #fff;
+}
+.example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.example-container .mat-form-field {
+  width: 220px;
+}
+
+.example-container form {
+  margin-bottom: 20px;
+}
+
+.example-container form > * {
+  margin: 5px 0;
+}
+
+.example-container .mat-radio-button {
+  margin: 0 12px;
+}

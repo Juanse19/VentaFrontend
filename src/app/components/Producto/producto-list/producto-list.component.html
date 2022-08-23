@@ -1,0 +1,24 @@
+
+  <mat-card>
+    <mat-card-title>Productos</mat-card-title>
+    <button mat-flat-button color="primary" routerLink="/producto/crear">Añadir Producto</button>
+    <mat-card-actions>
+      <div class="container">
+        <ejs-grid [dataSource]='productoData' [editSettings]='editSettings' (actionBegin)="actionBegin($event)" [toolbar]='toolbar' [allowPaging]="true"
+        [pageSettings]="pageSettings" allowSorting='true' [filterSettings]="filterOptions" allowTextWrap="true"
+        [allowFiltering]="true" height='350'>
+                    <e-columns>
+                        <e-column field='nombre' headerText='Nombre' width=160 ></e-column>
+                        <e-column field='valor_Unitario' headerText='valor_Unitario' width=160 ></e-column>
+                        <e-column field='stock' headerText='Stock' width=130  ></e-column>
+                        <e-column headerText='Administrar' width='160' textAlign='center' [commands]='commands'></e-column>
+                    </e-columns>
+                </ejs-grid>
+
+      </div>
+
+    </mat-card-actions>
+  </mat-card>
+
+
+

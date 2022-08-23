@@ -1,0 +1,14 @@
+.mat-card {
+  background: white;
+  color: #fff;
+}
+
+.mat-card-title {
+  color: rgb(18, 17, 17);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.mat-flat-button {
+  background: #007bff;
+  color: #fff;
+}

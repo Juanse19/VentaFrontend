@@ -1,0 +1,24 @@
+
+  <mat-card>
+    <mat-card-title>Clientes</mat-card-title>
+    <button mat-flat-button color="primary" routerLink="/cliente/crear">Añadir Cliente</button>
+    <mat-card-actions>
+      <div class="container">
+        <ejs-grid [dataSource]='clienteData' [editSettings]='editSettings' (actionBegin)="actionBegin($event)" [toolbar]='toolbar' [allowPaging]="true"
+        [pageSettings]="pageSettings" allowSorting='true' [filterSettings]="filterOptions" allowTextWrap="true"
+        [allowFiltering]="true" height='350'>
+                    <e-columns>
+                        <!-- <e-column field='idCliente' headerText='IdCliente' width=100 textAlign='Left' isPrimaryKey='true'></e-column> -->
+                        <e-column field='cedula' headerText='Cedula' width=130></e-column>
+                        <e-column field='nombre' headerText='Nombre' width=160 ></e-column>
+                        <e-column field='apellido' headerText='Apellido' width=160 ></e-column>
+                        <e-column field='telefono' headerText='Telefono' width=130  ></e-column>
+                        <e-column headerText='Administrar' width='160' textAlign='center' [commands]='commands'></e-column>
+                    </e-columns>
+                </ejs-grid>
+
+      </div>
+
+    </mat-card-actions>
+  </mat-card>
+
